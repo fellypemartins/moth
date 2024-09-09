@@ -14,3 +14,20 @@ connection.connect((err) => {
 })
 
 module.exports = connection
+
+
+// Criação do Banco de Dados
+
+/*
+
+CREATE DATABASE IF NOT EXISTS db_moth;
+
+USE db_moth;
+
+CREATE TABLE IF NOT EXISTS link (
+    path CHAR(6) PRIMARY KEY NOT NULL UNIQUE,
+    name VARCHAR(45) NOT NULL,
+    content VARCHAR(255) NOT NULL
+);
+
+*/
