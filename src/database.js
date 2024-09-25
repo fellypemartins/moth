@@ -27,7 +27,7 @@ USE db_moth;
 CREATE TABLE IF NOT EXISTS link (
     path CHAR(6) PRIMARY KEY NOT NULL UNIQUE,
     name VARCHAR(45) NOT NULL,
-    content VARCHAR(255) NOT NULL
+    content VARCHAR(1000) NOT NULL
 );
 
 */
