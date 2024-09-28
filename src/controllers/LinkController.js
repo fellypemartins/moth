@@ -32,22 +32,21 @@ module.exports = {
 
         let json = { error: '', result: {} }
 
-        let path = request.body.path
-        let name = request.body.name
-        let cont = request.body.content
+        let path    = request.body.path
+        let name    = request.body.name
+        let content = request.body.content
 
-        if (path != '' && name != '' && cont != '') {
+        if (path != '' && name != '' && content != '') {
 
-            let link = await linkService.createLink(path, name, cont)
+            let link = await linkService.createLink(path, name, content)
 
             json.result = {
-                path: path,
-                name: name,
-                content: cont
+                path:    path,
+                name:    name,
+                content: content
             }
 
         } else {
-            
             json.error = 'Não é possivel criar um link vazio'
         }
 
